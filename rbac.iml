@@ -25,6 +25,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" />
+          <factory-entry name="rbac" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
@@ -132,7 +133,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.1.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.11" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
@@ -141,5 +142,19 @@
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.26" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.26" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:2.1.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:2.1.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:2.1.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:5.1.8.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.1.8.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.lettuce:lettuce-core:5.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.36.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.36.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.36.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.36.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.36.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.36.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.2.10.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
   </component>
 </module>
