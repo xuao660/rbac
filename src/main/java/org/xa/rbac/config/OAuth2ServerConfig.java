@@ -59,6 +59,7 @@ public  class OAuth2ServerConfig {
 //            	.antMatchers("/menu/**").access("#oauth2.hasScope('select') and hasRole('admin')")          
 //            	.antMatchers("/user/**").access("#oauth2.hasScope('select') and hasRole('admin')")          
         	http.authorizeRequests()
+					.antMatchers("/hello").permitAll()//hasAnyAuthority("ROLE_admin")
         		.antMatchers("/system/config/**").permitAll()
             	.antMatchers("/get/login/**").permitAll()
             	.antMatchers("/oauth/token/**").permitAll()
@@ -125,7 +126,7 @@ public  class OAuth2ServerConfig {
     		service.setSupportRefreshToken(true);
     		service.setTokenStore(tokenStore);
     		service.setReuseRefreshToken(true);
-    		service.setAccessTokenValiditySeconds(60);
+    		service.setAccessTokenValiditySeconds(20);
     		service.setRefreshTokenValiditySeconds(60*60*24);
     		
     		return service;
