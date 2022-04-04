@@ -63,7 +63,8 @@ public  class OAuth2ServerConfig {
         		.antMatchers("/system/config/**").permitAll()
             	.antMatchers("/get/login/**").permitAll()
             	.antMatchers("/oauth/token/**").permitAll()
-            	.and()
+					.antMatchers("/sys/basic/**").permitAll()
+					.and()
             	.formLogin().permitAll()
                 .and().cors()
 //            	.and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
@@ -77,7 +78,7 @@ public  class OAuth2ServerConfig {
         		System.out.println(uri+"  "+roles);
         		http.authorizeRequests().antMatchers(uri).hasAnyAuthority(roles);
         	}
-        	
+			http.authorizeRequests().antMatchers("/sys/basic/**").permitAll();
             	
         }
     }
@@ -126,7 +127,7 @@ public  class OAuth2ServerConfig {
     		service.setSupportRefreshToken(true);
     		service.setTokenStore(tokenStore);
     		service.setReuseRefreshToken(true);
-    		service.setAccessTokenValiditySeconds(20);
+    		service.setAccessTokenValiditySeconds(15);
     		service.setRefreshTokenValiditySeconds(60*60*24);
     		
     		return service;
